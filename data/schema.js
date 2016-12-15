@@ -11,6 +11,12 @@ type Post {
 type Query {
   posts: [Post]
 }
+
+type Mutation {
+  upvotePost (
+    postId: Int!
+  ): Post
+}
 `
 
 export default makeExecutableSchema({

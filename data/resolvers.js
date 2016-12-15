@@ -11,6 +11,16 @@ const resolveFunctions = {
     posts() {
       return posts
     }
+  },
+  Mutation: {
+    upvotePost(_, { postId }) {
+      const post = posts.find(p => p.id === postId)
+      if (!post) {
+        throw new Error(`Couldn't find post with id ${postId}`)
+      }
+      post.votes += 1
+      return post
+    }
   }
 }
 

@@ -1,10 +1,15 @@
 import React from 'react'
+import gql from 'graphql-tag'
+import { graphql } from 'react-apollo'
 import './Post.css'
 
-const Post = ({ post }) => (
+const Post = ({ mutate, post }) => (
   <div className='post'>
     <div className='postVotesContainer'>
-      <button className='postVotes'>{post.votes}</button>
+      <button
+        className='postVotes'
+        onClick={() => mutate({ variables: { postId: post.id }})}
+      >{post.votes}</button>
     </div>
     <div className='postContentContainer'>
       <span className='postTitle'>{post.title}</span>
@@ -12,4 +17,13 @@ const Post = ({ post }) => (
   </div>
 )
 
-export default Post
+const Mutation = graphql(gql`
+  mutation upvotePost($postId: Int!) {
+    upvotePost(postId: $postId) {
+      id
+      votes
+    }
+  }
+`)
+
+export default Mutation(Post)
