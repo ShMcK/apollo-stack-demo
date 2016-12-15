@@ -23,6 +23,11 @@ const PostQuery = gql`
       id
       title
       votes
+      author {
+        id
+        firstName
+        lastName
+      }
     }
   }
 `

@@ -12,7 +12,8 @@ const Post = ({ mutate, post }) => (
       >{post.votes}</button>
     </div>
     <div className='postContentContainer'>
-      <span className='postTitle'>{post.title}</span>
+      <div className='postAuthor'>{post.author.firstName}</div>
+      <div className='postTitle'>{post.title}</div>
     </div>
   </div>
 )
