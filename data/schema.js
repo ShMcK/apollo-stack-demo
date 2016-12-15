@@ -17,6 +17,10 @@ type Mutation {
     postId: Int!
   ): Post
 }
+
+type Subscription {
+  postUpvoted: Post
+}
 `
 
 export default makeExecutableSchema({
