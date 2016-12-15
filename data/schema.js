@@ -1,37 +1,9 @@
 import { makeExecutableSchema } from 'graphql-tools'
 import resolvers from './resolvers'
-
-const typeDefs = `
-type Author {
-  id: Int!
-  firstName: String
-  lastName: String
-  posts: [Post]
-}
-
-type Post {
-  id: Int!
-  title: String
-  votes: Int
-  author: Author
-}
-
-type Query {
-  posts: [Post]
-}
-
-type Mutation {
-  upvotePost (
-    postId: Int!
-  ): Post
-}
-
-type Subscription {
-  postUpvoted: Post
-}
-`
+import Author from './Author/schema'
+import Post from './Post/schema'
 
 export default makeExecutableSchema({
-  typeDefs,
+  typeDefs: [Post, Author],
   resolvers,
 })
