@@ -1,0 +1,29 @@
+.post {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: lightgrey;
+  width: 80%;
+}
+
+.postVotesContainer {
+  flex: 1;
+
+}
+
+.postVotes {
+  border-style: none;
+  background-color: white;
+}
+
+.postContentContainer {
+  flex: 6;
+}
+
+.postTitle {
+  
+}
+
