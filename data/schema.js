@@ -1,9 +1,11 @@
 import { makeExecutableSchema } from 'graphql-tools'
-import resolvers from './resolvers'
-import Author from './Author/schema'
-import Post from './Post/schema'
+import { schema as Post, resolvers as postResolvers } from './Post'
+import { schema as Author, resolvers as authorResolvers } from './Author'
 
 export default makeExecutableSchema({
   typeDefs: [Post, Author],
-  resolvers,
+  resolvers: Object.assign({},
+    postResolvers,
+    authorResolvers
+  )
 })

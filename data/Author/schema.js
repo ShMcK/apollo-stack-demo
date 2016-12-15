@@ -1,4 +1,4 @@
-const Author = `
+export default `
 type Author {
   id: Int!
   firstName: String
@@ -6,5 +6,3 @@ type Author {
   posts: [Post]
 }
 `
-
-export default Author

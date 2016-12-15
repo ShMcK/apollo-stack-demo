@@ -1,4 +1,4 @@
-const Post = `
+export default `
 type Post {
   id: Int!
   title: String
@@ -20,5 +20,3 @@ type Subscription {
   postUpvoted: Post
 }
 `
-
-export default Post

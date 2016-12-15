@@ -1,10 +1,10 @@
-import { pubsub } from './subscriptions'
+import { pubsub } from '../subscriptions'
 
 // TODO: replace with db
-import posts from './Post/data'
-import authors from './Author/data'
+import posts from './data'
+import authors from '../Author/data'
 
-const resolveFunctions = {
+export default {
   Query: {
     posts: () => posts,
   },
@@ -22,12 +22,7 @@ const resolveFunctions = {
   Subscription: {
     postUpvoted: (post) => post,
   },
-  Author: {
-    posts: (author) => posts.filter(p => p.authorId === author.id)
-  },
   Post: {
     author: (post) => authors.find(a => a.id === post.authorId)
-  }
+  },
 }
-
-export default resolveFunctions
