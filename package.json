@@ -16,13 +16,17 @@
     "react-scripts": "0.8.4"
   },
   "dependencies": {
+    "apollo-client": "^0.5.20",
     "body-parser": "^1.15.2",
     "cors": "^2.8.1",
     "graphql": "^0.8.2",
     "graphql-server-express": "^0.4.3",
+    "graphql-tag": "^1.1.2",
     "graphql-tools": "^0.8.4",
     "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react-apollo": "^0.7.1",
+    "react-dom": "^15.4.1",
+    "redux": "^3.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
