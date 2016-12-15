@@ -3,8 +3,8 @@ import bodyParser from 'body-parser'
 import cors from 'cors'
 import { graphqlExpress, graphiqlExpress } from 'graphql-server-express'
 import { printSchema } from 'graphql/utilities/schemaPrinter'
+import schema from '../data/schema'
 
-const schema = {}
 const port = process.env.port || 4000
 const server = express().use('*', cors())
 
