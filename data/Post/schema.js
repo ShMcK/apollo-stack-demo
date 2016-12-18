@@ -8,6 +8,7 @@ type Post {
 
 type Query {
   posts: [Post]
+  authors: [Author]
 }
 
 type Mutation {
@@ -18,5 +19,12 @@ type Mutation {
 
 type Subscription {
   postUpvoted: Post
+}
+
+type Author {
+  id: Int!
+  firstName: String
+  lastName: String
+  posts: [Post]
 }
 `

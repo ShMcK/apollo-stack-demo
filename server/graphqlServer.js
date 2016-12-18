@@ -7,9 +7,8 @@ import schema from '../data/schema'
 
 const createGraphQLServer = (port) => {
 
-  const server = express().use('*', cors())
-
-  server
+  express()
+    .use('*', cors())
     .use('/graphql', bodyParser.json(), graphqlExpress({
       schema,
       context: {},
