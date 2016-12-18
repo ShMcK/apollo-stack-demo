@@ -1,12 +1,12 @@
 import { pubsub } from '../subscriptions'
 
 // TODO: replace with db
-import {posts, authors} from './data'
+import posts from './data'
+import authors from '../Author/data'
 
 export default {
   Query: {
     posts: () => posts,
-    authors: () => authors,
   },
   Mutation: {
     upvotePost: (_, { postId }) => {
@@ -24,8 +24,5 @@ export default {
   },
   Post: {
     author: (post) => authors.find(a => a.id === post.authorId)
-  },
-  Author: {
-    posts: (author) => posts.filter(p => p.authorId === author.id)
   },
 }

@@ -1,4 +1,6 @@
-export default `
+import Author from '../Author/schema'
+
+const Post = `
 type Post {
   id: Int!
   title: String
@@ -20,11 +22,6 @@ type Mutation {
 type Subscription {
   postUpvoted: Post
 }
-
-type Author {
-  id: Int!
-  firstName: String
-  lastName: String
-  posts: [Post]
-}
 `
+
+export default () => [Post, Author]
