@@ -28,5 +28,11 @@ export default {
   },
   link: {
     fontSize: '1.1rem',
-  }
+  },
+  login: {
+    height: '2rem',
+    width: '2rem',
+    borderRadius: '50%',
+    backgroundColor: color.medium,
+  },
 }

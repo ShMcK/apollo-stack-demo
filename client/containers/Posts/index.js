@@ -9,7 +9,6 @@ import { Card } from 'antd'
 
 const Posts = ({ data: { loading, posts }}) => (
   <Card style={styles.posts}>
-    <h3 style={styles.title}>Posts</h3>
     {loading
       ? <Loader />
       : <div style={styles.list}>

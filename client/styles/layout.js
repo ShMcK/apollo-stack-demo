@@ -3,3 +3,9 @@ export const center = {
   flexDirection: 'row',
   alignItems: 'center',
 }
+
+export const body = {
+  padding: 0,
+  margin: 0,
+  fontFamily: 'sans-serif',
+}

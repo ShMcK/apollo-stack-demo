@@ -2,4 +2,4 @@ import '../../node_modules/antd/dist/antd.min.css'
 
 export { default as color } from './color'
 export { default as font } from './font'
-export { center } from './layout'
+export { body, center } from './layout'

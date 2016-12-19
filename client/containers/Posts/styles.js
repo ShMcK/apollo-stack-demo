@@ -7,6 +7,7 @@ export default {
     justifyContent: 'center',
     width: '100%',
     maxWidth: '50rem',
+    borderRadius: '0.5rem',
   },
   title: {
     flex: 1,

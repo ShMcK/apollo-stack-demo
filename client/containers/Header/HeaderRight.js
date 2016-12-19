@@ -4,9 +4,9 @@ import styles from './styles'
 const leftOptions = (state) => {
   switch (state) {
     case 'loggedIn':
-      return <span style={styles.link}>Logout</span>
+      return <div style={styles.link}>Logout</div>
     default:
-      return <span style={styles.link}>Login</span>
+      return <div style={styles.login}></div>
   }
 }
 
