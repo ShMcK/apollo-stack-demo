@@ -53,6 +53,7 @@
     "whatwg-fetch": "1.1.1"
   },
   "dependencies": {
+    "antd": "^2.5.2",
     "apollo-client": "^0.5.20",
     "body-parser": "^1.15.2",
     "cors": "^2.8.1",

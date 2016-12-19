@@ -1,0 +1,28 @@
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.headerRight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.headerBrand {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 0.5rem;
+  background-color: blue;
+  margin-right: 1rem;
+}

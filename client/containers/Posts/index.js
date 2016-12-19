@@ -4,15 +4,19 @@ import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import './Posts.css'
 
+import { Card } from 'antd'
+
 const Posts = ({ data: { loading, posts }}) => {
   if (loading) {
     return <div>Loading...</div>
   } else {
     return (
-      <div className='posts'>
-        <h3 className='postsTitle'>Posts</h3>
-        {posts.map(post => <Post key={post.id} post={post} />)}
-      </div>
+      <Card className='posts'>
+          <h3 className='postsTitle'>Posts</h3>
+          <div className='postsList'>
+            {posts.map(post => <Post key={post.id} post={post} />)}
+          </div>
+      </Card>
     )
   }
 }
