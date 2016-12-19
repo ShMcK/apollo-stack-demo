@@ -2,17 +2,17 @@ import React from 'react'
 import Post from '../../components/Post'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
-import './Posts.css'
+import styles from './styles'
 import Loader from '../../components/Loader'
 
 import { Card } from 'antd'
 
 const Posts = ({ data: { loading, posts }}) => (
-  <Card className='posts'>
-    <h3 className='postsTitle'>Posts</h3>
+  <Card style={styles.posts}>
+    <h3 style={styles.title}>Posts</h3>
     {loading
       ? <Loader />
-      : <div className='postsList'>
+      : <div style={styles.list}>
         {posts.map(post => <Post key={post.id} post={post} />)}
       </div>
     }

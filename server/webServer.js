@@ -1,10 +1,11 @@
+
 const express = require('express')
 const { join } = require('path')
 const webpack = require('webpack')
 const webpackMiddleware = require('webpack-dev-middleware')
 const webpackHotMiddleware = require('webpack-hot-middleware')
 
-const createWebServer = (port) => {
+const createWebServer = (port: number) => {
 
   const isDevelopment = process.env.NODE_ENV !== 'production'
 

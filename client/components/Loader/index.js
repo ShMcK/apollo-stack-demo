@@ -1,9 +1,9 @@
 import React from 'react'
-import './Loader.css'
+import styles from './styles'
 import { Spin } from 'antd'
 
 const Loader = () => (
-  <section className='loaderContainer'>
+  <section style={styles.container}>
     <Spin size='large' />
   </section>
 )

@@ -76,7 +76,8 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "serve": "node scripts/serve.js"
+    "serve": "node scripts/serve.js",
+    "flow": "flow"
   },
   "jest": {
     "collectCoverageFrom": [

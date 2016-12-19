@@ -1,11 +1,10 @@
 import React from 'react'
-import './Header.css'
-
+import styles from './styles'
 import HeaderLeft from './HeaderLeft'
 import HeaderRight from './HeaderRight'
 
 const Header = ({ authState}) => (
-  <section className='headerContainer'>
+  <section style={styles.container}>
     <HeaderLeft />
     <HeaderRight authState='loggedOut' />
   </section>

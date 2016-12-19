@@ -1,10 +1,10 @@
 import React from 'react'
 import Header from '../../containers/Header'
 import Posts from '../../containers/Posts'
-import './App.css'
+import styles from './styles'
 
 const App = () => (
-  <div className="App">
+  <div style={styles.app}>
     <Header />
     <Posts />
   </div>

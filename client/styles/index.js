@@ -1,5 +1,5 @@
 import '../../node_modules/antd/dist/antd.min.css'
 
-import './layout.css'
-import './font.css'
-import './color.css'
+export { default as color } from './color'
+export { default as font } from './font'
+export { center } from './layout'

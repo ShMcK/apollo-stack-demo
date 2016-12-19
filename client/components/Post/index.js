@@ -1,25 +1,25 @@
 import React from 'react'
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
-import './Post.css'
+import styles from './styles'
 
 import { Button, Card } from 'antd'
 
 const Post = ({ mutate, post }) => (
   <Card>
-    <section className='post'>
-      <div className='postVotesContainer'>
+    <section style={styles.post}>
+      <div style={styles.votesContainer}>
         <Button
           shape="circle"
           icon="caret-up"
-          className='postVotes'
+          style={styles.votesButton}
           onClick={() => mutate({ variables: { postId: post.id } })}
           />
         <div>{post.votes}</div>
       </div>
-      <div className='postContentContainer'>
-        <div className='postAuthor'>{post.author.firstName}</div>
-        <div className='postTitle'>{post.title}</div>
+      <div style={styles.contentContainer}>
+        <div style={styles.author}>{post.author.firstName}</div>
+        <div style={styles.title}>{post.title}</div>
       </div>
     </section>
   </Card>

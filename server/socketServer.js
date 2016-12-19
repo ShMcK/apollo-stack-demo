@@ -1,8 +1,9 @@
+// @flow
 import { createServer } from 'http'
 import { SubscriptionServer } from 'subscriptions-transport-ws'
 import { subscriptionManager } from '../data/subscriptions'
 
-const createSocketServer = (port) => {
+const createSocketServer = (port: number) => {
 
   const websocketServer = createServer((request, response) => {
     response.writeHead(404)
