@@ -1,4 +1,6 @@
 import React from 'react'
+import Media from 'react-media'
+import Hamburger from '../../components/Hamburger'
 import styles from './styles'
 
 const leftOptions = (state) => {
@@ -12,7 +14,12 @@ const leftOptions = (state) => {
 
 const HeaderRight = ({ authState }) => (
   <div style={styles.right}>
-    {leftOptions(authState)}
+    <Media query='(min-width: 599px)'>
+      {leftOptions(authState)}
+    </Media>
+    <Media query='(max-width: 600px)'>
+      <Hamburger />
+    </Media>
   </div>
 )
 

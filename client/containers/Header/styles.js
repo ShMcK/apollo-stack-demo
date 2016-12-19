@@ -30,8 +30,8 @@ export default {
     fontSize: '1.1rem',
   },
   login: {
-    height: '2rem',
-    width: '2rem',
+    height: '1.5rem',
+    width: '1.5rem',
     borderRadius: '50%',
     backgroundColor: color.medium,
   },

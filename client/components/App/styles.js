@@ -15,7 +15,6 @@ export default {
   },
   side: {
     flex: 1,
-    maxWidth: '10rem',
   },
   main: {
     flex: 3,

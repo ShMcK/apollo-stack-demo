@@ -1,4 +1,5 @@
 import React from 'react'
+import Media from 'react-media'
 import Header from '../../containers/Header'
 import SideBar from '../SideBar'
 import Crumb from '../Crumb'
@@ -9,9 +10,9 @@ const App = () => (
   <div style={styles.app}>
     <Header />
     <section style={styles.body}>
-      <section style={styles.side}>
+      <Media style={styles.side} query="(min-width: 599px)">
         <SideBar />
-      </section>
+      </Media>
       <section style={styles.main}>
         <Crumb />
         <br />
